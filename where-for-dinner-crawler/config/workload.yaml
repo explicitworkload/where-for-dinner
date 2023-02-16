@@ -13,7 +13,7 @@ spec:
       autoscaling.knative.dev/minScale: "1"
   source:
     git:
-      url: <https URL for your generated project's Git repository>
+      url: https://github.com/explicitworkload/where-for-dinner.git
       ref:
         branch: main
     subPath: where-for-dinner-crawler

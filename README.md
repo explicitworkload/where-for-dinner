@@ -32,6 +32,6 @@ spec:
   git:
     ref:
       branch: main
-    url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+    url: https://github.com/explicitworkload/where-for-dinner.git
     subPath: fragments/tap-workload
 ```
