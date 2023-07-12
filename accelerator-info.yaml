@@ -1,0 +1,35 @@
+id: 5e79ee08-7d5f-4ee2-a213-ae7e0f99e931
+timestamp: 2023-07-12T19:48:04Z
+username: explicitworkload
+source: TAP-GUI
+accelerator:
+  name: where-for-dinner
+  source:
+    image: harbor.kubernetes.day/tap152/tap-packages@sha256:9d9fc8e638a737d627b9f8edc24dccf76b8dbcf73190a099ea879e39ac4b2051
+fragments:
+  - name: build-wrapper-maven
+    source:
+      image: harbor.kubernetes.day/tap152/tap-packages@sha256:195a3ca6585fa91c41292584a19c2807c72ecdf986ce860a7147451e89d467d4
+  - name: tap-workload
+    source:
+      image: harbor.kubernetes.day/tap152/tap-packages@sha256:dbf0dedb6848ad8a7704c1c19465a1ddae9039b0e63c1dd0df3e2ed9cbda6093
+options:
+  appSSOName: appsso-where-for-dinner
+  appWorkloadURL: https://where-for-dinner.<UPDATE ME>
+  bsGitBranch: main
+  cacheType: inmemCache
+  dbType: h2
+  devDefaultAccountPassword: letseat
+  devDefaultAccountUsername: where-for-dinner
+  dynamicMsgBroker: false
+  dynamicMsgBrokerClass: msgbroker-crossplane-where-for-dinner
+  enableCloudEvents: false
+  enableDefaultDevAccount: true
+  enableSecurity: false
+  includeBuildToolWrapper: true
+  msgBrokerType: rabbitmq
+  msgbrokerName: msgbroker-where-for-dinner
+  numRabbitMQClusterNodes: 1
+  projectName: where-for-dinner
+  serviceNamespace: service-instances
+  workloadNamespace: workloads
